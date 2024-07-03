@@ -13,10 +13,15 @@
 		// request 객체에서 값 추출하기
 	
 		String cm = request.getParameter("cm");
+	
+		
 		
 		if(cm != null ){
 		int a = Integer.parseInt(cm);
 			out.println("변환결과 ");
+			out.println("<br>");
+			String format = String.format("%.3f", a / (2.54));
+			out.println(format);
 			out.println("<br>");
 			out.println(a / (2.54));
 			out.println("<br>");
