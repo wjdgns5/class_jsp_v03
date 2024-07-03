@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,6 +27,10 @@
 			out.println(a / (2.54));
 			out.println("<br>");
 			out.println( (int)(a / (2.54)) );
+			
+			DecimalFormat decimalFormat = new DecimalFormat("###,###");
+			String formatResult =  decimalFormat.format(a / (2.54));
+			out.println(formatResult);
 		} else {
 			out.println("<p> 다시 해보기</p>");
 		}
